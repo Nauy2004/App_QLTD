@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DOT
 {
-    internal class Employyees
+    public class Employyees
     {
         public string EmployeeID { get; set; }
         public string EmployeeName { get; set; }

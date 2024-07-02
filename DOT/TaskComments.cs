@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DOT
 {
-    internal class TaskComments
+    public class TaskComments
     {
         public string CommentID { get; set; }
         public string CommentText { get; set; }

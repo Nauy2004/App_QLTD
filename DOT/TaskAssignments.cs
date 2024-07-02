@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DOT
 {
-    internal class TaskAssignments
+    public class TaskAssignments
     {
         public string TaskID { get; set; }
         public string EmployeeID { get; set; }
