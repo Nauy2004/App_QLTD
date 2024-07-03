@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class SqlConncectionData
+    internal class ConnectDB
     {
         public static SqlConnection Connect()
         {
-            string strConn = @"data Source=DESKTOP-4976QMC;Initial Catalog=SQL_QLTD;Integrated Security=True";
-            SqlConnection sConn = new SqlConnection(strConn);
-            return sConn;
+            string strconn = @"Data Source=ADMINISTRATOR\\SQLEXPRESS;Initial Catalog=SQL_QLTD;Integrated Security=True";
+            SqlConnection conn = new SqlConnection(strconn);
+            return conn;
         }
     }
 }
