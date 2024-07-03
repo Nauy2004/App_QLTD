@@ -387,7 +387,6 @@
             this.guna2Panel2.Padding = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.guna2Panel2.Size = new System.Drawing.Size(246, 40);
             this.guna2Panel2.TabIndex = 10001;
-            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // guna2HtmlLabel2
             // 
@@ -659,7 +658,6 @@
             this.pic_home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_home.TabIndex = 10003;
             this.pic_home.TabStop = false;
-            this.pic_home.Click += new System.EventHandler(this.pic_home_Click);
             // 
             // guna2PictureBox3
             // 
@@ -672,7 +670,6 @@
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 10003;
             this.guna2PictureBox3.TabStop = false;
-            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
             // 
             // ls_menu_5
             // 

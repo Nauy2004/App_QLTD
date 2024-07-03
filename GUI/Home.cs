@@ -70,26 +70,10 @@ namespace GUI
             formChildForm.BringToFront();
             formChildForm.Show();
         }
-
-
-        private void guna2PictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pic_home_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new loging());
+            openChildForm(new  ProjectAll());
+            hideSubMenu();
         }
     }
 }
