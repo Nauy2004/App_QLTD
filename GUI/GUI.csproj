@@ -142,5 +142,17 @@
   <ItemGroup>
     <None Include="Resources\icons8-menu-16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-forward-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hotel-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-forward-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-saas-64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

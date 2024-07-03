@@ -63,9 +63,39 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_forward_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-forward-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_forward_501 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-forward-501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-home-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_hotel_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-hotel-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +126,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_overview_48_white {
             get {
                 object obj = ResourceManager.GetObject("icons8-overview-48-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_saas_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-saas-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
