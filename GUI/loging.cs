@@ -67,26 +67,45 @@ namespace GUI
                 string password = txtMatKhau.Text;
                 BSLogin bslogin = new BSLogin();
 
-                Users user = BSLogin.Login(username, password);
+                Users user = new Users
+                {
+                    UserName = username,
+                    PasswordHash = password
+                };
+
                 string getUser = bslogin.CheckLogic(user);
 
-                if (getUser != null)
+                if (getUser == "success")
                 {
                     // Đăng nhập thành công, chuyển sang Form Home
                     Home homeForm = new Home();
                     homeForm.Show();
                     this.Hide();
                 }
+                else if (getUser == "requeid_taikhoan")
+                {
+                    // Tài khoản không hợp lệ, hiển thị thông báo lỗi
+                    MessageBox.Show("Tài khoản không hợp lệ!");
+                    this.Show();
+                }
+                else if (getUser == "requeid_password")
+                {
+                    // Mật khẩu không hợp lệ, hiển thị thông báo lỗi
+                    MessageBox.Show("Mật khẩu không hợp lệ!");
+                    this.Show();
+                }
                 else
                 {
                     // Đăng nhập thất bại, hiển thị thông báo lỗi
                     MessageBox.Show("Đăng nhập không thành công!");
+                    this.Show();
                 }
             }
             catch (Exception ex)
             {
                 // Xử lý lỗi và hiển thị thông báo lỗi
                 MessageBox.Show("Lỗi đăng nhập: " + ex.Message);
+                this.Show();
             }
         }
     }

@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class UserAccess
+    public class UserAccess : ConnectDB
     {
-        public class TaiKhoanAcess : ConnectDB
+        public string CheckLogic(Users user)
         {
-            public string CheckLogic(Users user)
-            {
-                string info = CheckLogic(user);
-                return info;
-            }
+            string info = CheckLogic(user);
+            return info;
         }
     }
+
 }
