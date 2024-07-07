@@ -12,34 +12,19 @@ namespace BLL
 {
     public class BSLogin
     {
-        
-       
         public string CheckLogic(Users user)
-        { 
-            // Kết nối đến cơ sở dữ liệu và gọi thủ tục lưu trữ
-            using (SqlConnection connection = ConnectDB.Connect())
+        {
+            string userId = null;
+            try
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand("SP_Login", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@UserName", user.UserName);
-                command.Parameters.AddWithValue("@PasswordHash", user.PasswordHash);
-
-                object result = command.ExecuteScalar();
-                if (result != null)
-                {
-                    // Tài khoản và mật khẩu hợp lệ
-                    return "success";
-                }
-                else
-                {
-                    // Tài khoản hoặc mật khẩu không hợp lệ
-                    return "failed";
-                }
+                userId = Database_Login.Login(user);
             }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi trong quá trình xử lý đăng nhập: " + ex.Message);
+            }
+
+            return userId;
         }
-
-
-
     }
 }
