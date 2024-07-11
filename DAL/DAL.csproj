@@ -44,7 +44,6 @@
     <Compile Include="ConnectDB.cs" />
     <Compile Include="Database_Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserAccess.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DOT\DOT.csproj">
