@@ -23,7 +23,6 @@ namespace BLL
             {
                 throw new Exception("Lỗi trong quá trình xử lý đăng nhập: " + ex.Message);
             }
-
             return userId;
         }
     }

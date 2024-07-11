@@ -18,14 +18,12 @@ namespace DAL
             try
             {
                 SqlConnection conn = ConnectDB.Connect();
-
                 conn.Open();
 
                 SqlCommand cmd = new SqlCommand("SP_Login", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Username", user.UserName);
                 cmd.Parameters.AddWithValue("@Password", user.PasswordHash);
-
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows)
@@ -38,9 +36,7 @@ namespace DAL
                 }
                 reader.Close();
                 conn.Close();
-
             }
-
             catch (SqlException ex)
             {
                 // Xử lý lỗi SQL
@@ -51,7 +47,6 @@ namespace DAL
                 // Xử lý lỗi khác
                 throw new Exception("Lỗi không xác định: " + ex.Message);
             }
-
             return userlogin;
         }
     }

@@ -55,8 +55,7 @@ namespace GUI
 
         private void enter_input(object sender, EventArgs e)
         {
-            txtTaikhoan.Text = "";
-            txtMatKhau.Text = "";
+           
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
