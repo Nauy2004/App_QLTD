@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DOT;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,19 @@ namespace GUI
 {
     public partial class Home : Form
     {
+        string userID = UserProperties.UserId;
         public Home()
         {
             InitializeComponent();
         }
         private void Home_Load(object sender, EventArgs e)
         {
+            BSHOME sHOME = new BSHOME();
+            Employyees employyee = sHOME.GetEml(userID);
+
             guna2ShadowForm1.SetShadowForm(this);
             customizeDes();
+            nameUser.Text = employyee.EmployeeName;
         }
         private void customizeDes()
         {
@@ -74,6 +81,11 @@ namespace GUI
         {
             openChildForm(new  ProjectAll());
             hideSubMenu();
+        }
+
+        private void nameUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

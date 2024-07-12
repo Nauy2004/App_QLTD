@@ -32,6 +32,8 @@ namespace DAL
                         {
                             user = new Users(); // Create a new User object
                             user.UserID = reader.GetString(0);
+                            user.UserName = reader.GetString(1);
+                            user.PasswordHash = reader.GetString(2);
                         }
                     }
 
@@ -46,8 +48,6 @@ namespace DAL
 
             return user;
         }
-
-
 
         public String GetRoleUser(string roleId)
         {
@@ -83,6 +83,40 @@ namespace DAL
                 throw new Exception("Lỗi không xác định: " + ex.Message);
             }
             return userRole;
+        }
+
+        public Employyees GetEmployyees(string userId)
+        {
+            Employyees Empl = null;
+            try
+            {
+                using (SqlConnection conn = ConnectDB.Connect()) // Use using for automatic resource disposal
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("SP_getInfoEmpl", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id", userId);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        if (reader.Read()) // Assuming a single user per ID
+                        {
+                            Empl = new Employyees(); // Create a new User object
+                            Empl.EmployeeID = reader.GetString(0);
+                            Empl.EmployeeName = reader.GetString(1);
+                            Empl.EmployeeEmail = reader.GetString(2);
+                            Empl.EmployeeRole = reader.GetString(3);
+                        }
+                    }
+
+                    reader.Close();
+                }
+            }
+            catch { }
+            return Empl;
         }
     }
 }

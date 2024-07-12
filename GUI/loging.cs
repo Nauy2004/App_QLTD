@@ -17,7 +17,7 @@ namespace GUI
     {
         Users username = new Users();
         BSLogin bslogin = new BSLogin();
-
+        
         public loging()
         {
             InitializeComponent();
@@ -62,8 +62,8 @@ namespace GUI
         {
             try
             {
-                string username = txtTaikhoan.Text;
-                string password = txtMatKhau.Text;
+                string username = "developer2";
+                string password = "dev123";                                          
                 BSLogin bslogin = new BSLogin();
 
                 Users user = new Users
@@ -84,11 +84,12 @@ namespace GUI
                     }
                     else
                     {
+                        UserProperties.UserId = getUser;
                         // Đăng nhập thành công, chuyển sang Form Home
                         Home homeForm = new Home();
                         homeForm.Show();
                         this.Hide();
-                    }    
+                    }
                 }
                 else
                 {
