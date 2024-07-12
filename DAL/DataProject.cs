@@ -13,8 +13,9 @@ namespace DAL
     public class DataProject
     {
         private SqlDataReader reader = null;
-        public DataProject() {}
+        public DataProject() { }
 
+<<<<<<< HEAD
         public SqlDataReader GetProjectAll(string roleId)
         {
 
@@ -70,7 +71,35 @@ namespace DAL
             cmd.Parameters.AddWithValue("@id", roleId);
             reader = cmd.ExecuteReader();
             return reader;
+=======
+        public SqlDataReader getDataProject(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                throw new ArgumentException("Invalid project ID provided.");
+            }
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_GetAllProject", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    // Open connection and execute reader within using block for auto-closing
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    return reader;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle potential exceptions during database operations
+                throw new Exception("An error occurred while retrieving project data.", ex);
+            }
+>>>>>>> 949e6139a3a91b6a3d4b9c39565fb369b04a66d4
         }
 
     }
+
 }

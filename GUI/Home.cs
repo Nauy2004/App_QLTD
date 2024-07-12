@@ -88,10 +88,16 @@ namespace GUI
 
         }
 
+<<<<<<< HEAD
         private void ls_menu_1_Click(object sender, EventArgs e)
         {
             Home home = new Home();
             home.Show();
+=======
+        private void ls_menu_2_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> 949e6139a3a91b6a3d4b9c39565fb369b04a66d4
         }
     }
 }
