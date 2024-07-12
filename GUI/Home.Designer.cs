@@ -418,7 +418,7 @@
             this.nameUser.Location = new System.Drawing.Point(33, 3);
             this.nameUser.Name = "nameUser";
             this.nameUser.Padding = new System.Windows.Forms.Padding(10, 3, 0, 0);
-            this.nameUser.Size = new System.Drawing.Size(136, 23);
+            this.nameUser.Size = new System.Drawing.Size(134, 36);
             this.nameUser.TabIndex = 7;
             this.nameUser.Text = "Hoàng Nguyễn Tuấn ";
             this.nameUser.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;

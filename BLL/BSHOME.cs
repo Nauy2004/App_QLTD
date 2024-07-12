@@ -13,6 +13,7 @@ namespace BLL
     {
         private GetDataUser GetDatUser;
         private DataProject DataProjet;
+        SqlConnection conn = ConnectDB.Connect();
         public BSHOME() { 
             GetDatUser = new GetDataUser(); 
             DataProjet = new DataProject();
@@ -30,5 +31,53 @@ namespace BLL
             }
             return eml;
         }
+        public List<Project> GetProjects(string id)
+        {
+            List<Project> projects = new List<Project>();
+            // Get reader containing project data
+            using (SqlDataReader reader = DataProjet.GetProjectAll(id))
+            {
+                // Read data from reader
+                while (reader.Read())
+                {
+                    Project project = new Project();
+                    project.ProjectID = reader.GetString(0);
+                    project.ProjectName = reader.GetString(1);
+                    project.ProjectDescription = reader.GetString(2);
+                    project.StartDate = reader.GetDateTime(3);
+                    project.EndDate = reader.GetDateTime(4);
+                    // Create a new Project object and add it to the list
+                    projects.Add(project);
+                }
+                conn.Close();
+            }
+            return projects;
+        }
+
+        public List<Project> sreachProjects(string pra)
+        {
+            List<Project> projects = new List<Project>();
+            // Get reader containing project data
+            using (SqlDataReader reader = DataProjet.sreachProject(pra))
+            {
+                // Read data from reader
+                while (reader.Read())
+                {
+                    Project project = new Project();
+                    project.ProjectID = reader.GetString(0);
+                    project.ProjectName = reader.GetString(1);
+                    project.ProjectDescription = reader.GetString(2);
+                    project.StartDate = reader.GetDateTime(3);
+                    project.EndDate = reader.GetDateTime(4);
+                    // Create a new Project object and add it to the list
+                    projects.Add(project);
+                }
+                conn.Close();
+            }
+            return projects;
+        }
+
+
+        b
     }
 }
