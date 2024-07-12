@@ -87,5 +87,10 @@ namespace GUI
         {
 
         }
+
+        private void ls_menu_2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

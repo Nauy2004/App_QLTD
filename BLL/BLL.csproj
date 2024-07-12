@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BSAccount.cs" />
     <Compile Include="BSHOME.cs" />
     <Compile Include="BSLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

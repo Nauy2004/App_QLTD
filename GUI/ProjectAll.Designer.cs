@@ -50,8 +50,9 @@
             this.Panel_Project_top.Controls.Add(this.panel_Project_topright);
             this.Panel_Project_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Project_top.Location = new System.Drawing.Point(0, 0);
+            this.Panel_Project_top.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Panel_Project_top.Name = "Panel_Project_top";
-            this.Panel_Project_top.Size = new System.Drawing.Size(1058, 56);
+            this.Panel_Project_top.Size = new System.Drawing.Size(2821, 134);
             this.Panel_Project_top.TabIndex = 1;
             // 
             // panel_project_topleft
@@ -60,8 +61,9 @@
             this.panel_project_topleft.Controls.Add(this.guna2HtmlLabel1);
             this.panel_project_topleft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_project_topleft.Location = new System.Drawing.Point(0, 0);
+            this.panel_project_topleft.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel_project_topleft.Name = "panel_project_topleft";
-            this.panel_project_topleft.Size = new System.Drawing.Size(191, 56);
+            this.panel_project_topleft.Size = new System.Drawing.Size(510, 134);
             this.panel_project_topleft.TabIndex = 2;
             // 
             // guna2HtmlLabel1
@@ -71,9 +73,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 12);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(32, 29);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(118, 34);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(286, 83);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Tạo dự án";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,9 +85,10 @@
             // 
             this.panel_Project_topright.Controls.Add(this.btn_create_project);
             this.panel_Project_topright.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Project_topright.Location = new System.Drawing.Point(779, 0);
+            this.panel_Project_topright.Location = new System.Drawing.Point(2077, 0);
+            this.panel_Project_topright.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel_Project_topright.Name = "panel_Project_topright";
-            this.panel_Project_topright.Size = new System.Drawing.Size(279, 56);
+            this.panel_Project_topright.Size = new System.Drawing.Size(744, 134);
             this.panel_Project_topright.TabIndex = 2;
             // 
             // btn_create_project
@@ -97,9 +101,10 @@
             this.btn_create_project.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_create_project.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_create_project.ForeColor = System.Drawing.Color.White;
-            this.btn_create_project.Location = new System.Drawing.Point(9, 6);
+            this.btn_create_project.Location = new System.Drawing.Point(24, 14);
+            this.btn_create_project.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btn_create_project.Name = "btn_create_project";
-            this.btn_create_project.Size = new System.Drawing.Size(107, 43);
+            this.btn_create_project.Size = new System.Drawing.Size(285, 103);
             this.btn_create_project.TabIndex = 2;
             this.btn_create_project.Text = "Tạo Dự Án";
             // 
@@ -114,17 +119,20 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(15, 144);
+            this.guna2TextBox1.Location = new System.Drawing.Point(40, 343);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(19, 19, 19, 19);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(260, 31);
+            this.guna2TextBox1.Size = new System.Drawing.Size(693, 74);
             this.guna2TextBox1.TabIndex = 2;
             // 
             // btn_delete
             // 
+            this.btn_delete.MinimumWidth = 12;
             this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Width = 250;
             // 
             // guna2Button1
             // 
@@ -138,20 +146,22 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Image = global::GUI.Properties.Resources.icons8_search_50__1_;
-            this.guna2Button1.Location = new System.Drawing.Point(236, 142);
+            this.guna2Button1.Location = new System.Drawing.Point(629, 339);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(33, 33);
+            this.guna2Button1.Size = new System.Drawing.Size(88, 79);
             this.guna2Button1.TabIndex = 3;
             // 
             // ProjectAll
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 707);
+            this.ClientSize = new System.Drawing.Size(2821, 1686);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.Panel_Project_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "ProjectAll";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjectAll";
