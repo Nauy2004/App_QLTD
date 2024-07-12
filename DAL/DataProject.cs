@@ -49,5 +49,28 @@ namespace DAL
             cmd.Parameters.AddWithValue("@StartDate", start);
             cmd.ExecuteNonQuery();
         }
+
+        public void DeleteProject(string id) 
+        { 
+            SqlConnection conn = ConnectDB.Connect();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("proc_delete", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
+        }
+
+        public SqlDataReader GetRoleUserProject(string roleId)
+        {
+
+            SqlConnection conn = ConnectDB.Connect();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("sp_checkRoleProject", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", roleId);
+            reader = cmd.ExecuteReader();
+            return reader;
+        }
+
     }
 }

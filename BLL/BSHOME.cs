@@ -77,7 +77,30 @@ namespace BLL
             return projects;
         }
 
-
-        b
+        public List<UsersProject> UserProjects(string id_emp)
+        {
+            List<UsersProject> projects = new List<UsersProject>();
+            // Get reader containing project data
+            using (SqlDataReader reader = DataProjet.GetRoleUserProject(id_emp))
+            {
+                // Read data from reader
+                while (reader.Read())
+                {
+                    UsersProject project = new UsersProject();
+                    project.project_id = reader.GetString(0);
+                    project.emp_id = reader.GetString(1);
+                    project.role = reader.GetString(2);
+                    // Create a new Project object and add it to the list
+                    projects.Add(project);
+                }
+                conn.Close();
+            }
+            return projects;
+        }
+        
+        public void DeleteProject( string id_project )
+        {
+            DataProjet.DeleteProject(id_project);
+        }
     }
 }

@@ -509,6 +509,7 @@
             this.ls_menu_1.Size = new System.Drawing.Size(169, 60);
             this.ls_menu_1.TabIndex = 7;
             this.ls_menu_1.Text = "Trang chủ";
+            this.ls_menu_1.Click += new System.EventHandler(this.ls_menu_1_Click);
             // 
             // guna2DragControl1
             // 

@@ -62,8 +62,8 @@ namespace GUI
         {
             try
             {
-                string username = "developer2";
-                string password = "dev123";                                          
+                string username = "admin2";
+                string password = "admin123";                                          
                 BSLogin bslogin = new BSLogin();
 
                 Users user = new Users

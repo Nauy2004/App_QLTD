@@ -149,6 +149,7 @@
             this.listViewProject.UseCompatibleStateImageBehavior = false;
             this.listViewProject.View = System.Windows.Forms.View.Details;
             this.listViewProject.SelectedIndexChanged += new System.EventHandler(this.listViewProject_SelectedIndexChanged);
+            this.listViewProject.DoubleClick += new System.EventHandler(this.listViewProject_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -224,6 +225,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(107, 31);
             this.guna2Button3.TabIndex = 7;
             this.guna2Button3.Text = "Xóa";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button4
             // 

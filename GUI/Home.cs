@@ -87,5 +87,11 @@ namespace GUI
         {
 
         }
+
+        private void ls_menu_1_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+        }
     }
 }
