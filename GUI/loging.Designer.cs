@@ -51,7 +51,7 @@
             this.header_logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.header_logo.Location = new System.Drawing.Point(0, 0);
             this.header_logo.Name = "header_logo";
-            this.header_logo.Size = new System.Drawing.Size(910, 112);
+            this.header_logo.Size = new System.Drawing.Size(310, 112);
             this.header_logo.TabIndex = 0;
             // 
             // pictureBox1
@@ -79,7 +79,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(50, 30, 50, 0);
-            this.panel1.Size = new System.Drawing.Size(910, 344);
+            this.panel1.Size = new System.Drawing.Size(310, 344);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -111,7 +111,7 @@
             this.checkBoxShowPass.ForeColor = System.Drawing.Color.Black;
             this.checkBoxShowPass.Location = new System.Drawing.Point(30, 227);
             this.checkBoxShowPass.Name = "checkBoxShowPass";
-            this.checkBoxShowPass.Size = new System.Drawing.Size(255, 44);
+            this.checkBoxShowPass.Size = new System.Drawing.Size(105, 19);
             this.checkBoxShowPass.TabIndex = 1;
             this.checkBoxShowPass.Text = "Hiển mật khẩu";
             this.checkBoxShowPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -185,7 +185,7 @@
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(87, 33);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(303, 84);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(121, 35);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Đăng nhập";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,7 +196,7 @@
             this.title_top.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title_top.Location = new System.Drawing.Point(37, 13);
             this.title_top.Name = "title_top";
-            this.title_top.Size = new System.Drawing.Size(303, 84);
+            this.title_top.Size = new System.Drawing.Size(121, 35);
             this.title_top.TabIndex = 0;
             this.title_top.Text = "Đăng nhập";
             // 
@@ -204,17 +204,17 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 529);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 452);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(910, 145);
+            this.guna2Panel1.Size = new System.Drawing.Size(310, 145);
             this.guna2Panel1.TabIndex = 2;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // loging
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 33F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 674);
+            this.ClientSize = new System.Drawing.Size(310, 597);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.header_logo);
