@@ -22,8 +22,8 @@ namespace DAL
 
                 SqlCommand cmd = new SqlCommand("SP_Login", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Username", user.UserName);
-                cmd.Parameters.AddWithValue("@Password", user.PasswordHash);
+                cmd.Parameters.AddWithValue("@user", user.UserName);
+                cmd.Parameters.AddWithValue("@pass", user.PasswordHash);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows)

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ConnectDB.cs" />
     <Compile Include="Database_Login.cs" />
+    <Compile Include="GetUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

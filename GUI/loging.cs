@@ -71,27 +71,24 @@ namespace GUI
                     UserName = username,
                     PasswordHash = password
                 };
-
                 string getUser = bslogin.CheckLogic(user);
-
-                if (getUser == "success")
+                MessageBox.Show(getUser);
+                if (getUser != null)
                 {
-                    // Đăng nhập thành công, chuyển sang Form Home
-                    Home homeForm = new Home();
-                    homeForm.Show();
-                    this.Hide();
-                }
-                else if (getUser == "requeid_taikhoan")
-                {
-                    // Tài khoản không hợp lệ, hiển thị thông báo lỗi
-                    MessageBox.Show("Tài khoản không hợp lệ!");
-                    this.Show();
-                }
-                else if (getUser == "requeid_password")
-                {
-                    // Mật khẩu không hợp lệ, hiển thị thông báo lỗi
-                    MessageBox.Show("Mật khẩu không hợp lệ!");
-                    this.Show();
+                    string getRole = bslogin.CheckRole(getUser);
+                    if (getRole.ToLower() == "admin") 
+                    {
+                        Account acc = new Account();
+                        acc.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        // Đăng nhập thành công, chuyển sang Form Home
+                        Home homeForm = new Home();
+                        homeForm.Show();
+                        this.Hide();
+                    }    
                 }
                 else
                 {
