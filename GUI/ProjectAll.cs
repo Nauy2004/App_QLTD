@@ -32,6 +32,7 @@ namespace GUI
             BSHOME sHOME = new BSHOME();
             Employyees employyee = sHOME.GetEml(userID);
             showProject(employyee.EmployeeID);
+            TextBoxStartProject.Text = DateTime.Now.ToString();
         }
 
         private void listViewProject_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,8 +40,20 @@ namespace GUI
             if (listViewProject.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = listViewProject.SelectedItems[0];
-                string projectName = selectedItem.Text;
+
+                // Assuming project name is in the first column (index 0)
+                string projectName = selectedItem.SubItems[0].Text;
                 guna2TextBox1.Text = projectName;
+
+                // Assuming project ID is in the second column (index 1)
+                string projectID = selectedItem.SubItems[0].Text;
+                textboxIDproject.Text = projectID;
+
+                // Assuming remaining details are in subsequent columns (adjust indices as needed)
+                TextBoxNameProject.Text = selectedItem.SubItems[1].Text;
+                TextBoxDescProject.Text = selectedItem.SubItems[2].Text;
+                TextBoxStartProject.Text = selectedItem.SubItems[3].Text;
+                textBoxProjectEnd.Text = selectedItem.SubItems[4].Text;
             }
         }
 
@@ -89,10 +102,26 @@ namespace GUI
         {
             guna2TextBox1.Clear();
         }
-
         private void guna2Button5_Click(object sender, EventArgs e)
         {
+            string id = textboxIDproject.Text;
+            string name = TextBoxNameProject.Text;
+            string desc = TextBoxDescProject.Text;
+            DateTime startDate = DateTime.Parse(TextBoxStartProject.Text);
+            DateTime endDate = DateTime.Parse(textBoxProjectEnd.Text);
 
+            try
+            {
+                BSHOME projectBLL = new BSHOME();
+                projectBLL.UPProject(id, name, desc, startDate, endDate);
+                MessageBox.Show("Project Update successfully!");
+                clearTextBox();
+                panel1_update.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error creating project: " + ex.Message);
+            }
         }
 
         private void guna2HtmlLabel5_Click(object sender, EventArgs e)
@@ -137,12 +166,12 @@ namespace GUI
             Employyees employyee = bshome.GetEml(userID);
             List<UsersProject> ds = bshome.UserProjects(employyee.EmployeeID);
             bool projectDeleted = false;
-
             for (int i = 0; i < ds.Count; i++)
             {
                 if (ds[i].role.ToUpper() == "ADMIN" && ds[i].project_id == isProjectSelect)
                 {
-                    bshome.DeleteProject(isProjectSelect);
+                    MessageBox.Show($"{ds.Count}");
+                    
                     projectDeleted = true;
                     break;
                 }
@@ -165,6 +194,61 @@ namespace GUI
         }
 
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreateBtnProject_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textboxIDproject.Text) ||
+                    string.IsNullOrEmpty(TextBoxNameProject.Text) ||
+                    string.IsNullOrEmpty(TextBoxDescProject.Text))
+            {
+                MessageBox.Show("Please fill in all project details!");
+                return;
+            }
+            string id = textboxIDproject.Text;
+            string name = TextBoxNameProject.Text;
+            string desc = TextBoxDescProject.Text;
+            DateTime startDate = DateTime.Parse(TextBoxStartProject.Text);
+            DateTime endDate = DateTime.Parse(textBoxProjectEnd.Text);
+
+            try
+            {
+                BSHOME projectBLL = new BSHOME();
+                Employyees employyee = projectBLL.GetEml(userID);
+                List<UsersProject> ds = projectBLL.UserProjects(employyee.EmployeeID);
+
+                projectBLL.AddProject(id, name, desc, startDate, endDate);
+
+                if (projectBLL.checkUserProjectNull(ds, id))
+                {
+                    projectBLL.setProjectUser(employyee.EmployeeID, id, "admin");
+                    MessageBox.Show("susecc");
+                }
+                else
+                {
+                    MessageBox.Show($"not susecc");
+                }
+                MessageBox.Show("Project created successfully!");
+                clearTextBox();
+                panel1_update.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error creating project: " + ex.Message);
+            }
+        }
+    
+        private void clearTextBox()
+        {
+            textboxIDproject.Clear();
+            TextBoxNameProject.Clear();
+            TextBoxDescProject.Clear();
+            textBoxProjectEnd.Clear();
+        }
+
+        private void panel1_update_Paint(object sender, PaintEventArgs e)
         {
 
         }

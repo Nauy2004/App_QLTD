@@ -7,6 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using DOT;
 using System.Runtime.Remoting.Messaging;
+using System.Globalization;
+using System.Runtime.InteropServices.ComTypes;
+using System.Collections;
+using System.Security.Cryptography;
+using System.Xml.Linq;
 
 namespace DAL
 {
@@ -19,12 +24,12 @@ namespace DAL
         public SqlDataReader GetProjectAll(string roleId)
         {
 
-                SqlConnection conn = ConnectDB.Connect();
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("SP_GetAllProject", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id", roleId);
-                reader = cmd.ExecuteReader();
+            SqlConnection conn = ConnectDB.Connect();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SP_GetAllProject", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", roleId);
+            reader = cmd.ExecuteReader();
             return reader;
         }
         public SqlDataReader sreachProject(string pra)
@@ -38,7 +43,7 @@ namespace DAL
             reader = cmd.ExecuteReader();
             return reader;
         }
-        public void CreateProject(string id, string name, string desc, DateTime start)
+        public void CreateProject(string id, string name, string desc, DateTime start, DateTime end)
         {
             SqlConnection conn = ConnectDB.Connect();
             conn.Open();
@@ -48,11 +53,45 @@ namespace DAL
             cmd.Parameters.AddWithValue("@ProjectName", name);
             cmd.Parameters.AddWithValue("@ProjectDescription", desc);
             cmd.Parameters.AddWithValue("@StartDate", start);
+            cmd.Parameters.AddWithValue("@EndDate", end);
             cmd.ExecuteNonQuery();
         }
 
-        public void DeleteProject(string id) 
-        { 
+        public void SetUserProject(string id_emp, string id_project, string role)
+        {
+            SqlConnection conn = ConnectDB.Connect();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SP_SetUserProjectRole", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id_emp", id_emp);
+            cmd.Parameters.AddWithValue("@id_project", id_project);
+            cmd.Parameters.AddWithValue("@role", role);
+            cmd.ExecuteNonQuery();
+        }
+
+        public void UpdateProjecct(string id, string name, string desc, DateTime start, DateTime end)
+        {
+            SqlConnection conn = ConnectDB.Connect();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SP_UpdateProject", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@ProjectName", name);
+            cmd.Parameters.AddWithValue("@ProjectDescription", desc);
+            cmd.Parameters.AddWithValue("@StartDate", start);
+            cmd.Parameters.AddWithValue("@EndDate", end);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Project updated successfully.");
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("Error updating project: " + ex.Message);
+            }
+        }
+        public void DeleteProject(string id)
+        {
             SqlConnection conn = ConnectDB.Connect();
             conn.Open();
             SqlCommand cmd = new SqlCommand("proc_delete", conn);
@@ -97,9 +136,8 @@ namespace DAL
                 // Handle potential exceptions during database operations
                 throw new Exception("An error occurred while retrieving project data.", ex);
             }
-
         }
-
     }
 
 }
+
