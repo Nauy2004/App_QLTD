@@ -743,7 +743,8 @@
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(246, 40);
             this.guna2Button3.TabIndex = 10002;
-            this.guna2Button3.Text = "Xem tất cả dự án";
+            this.guna2Button3.Text = "Xem tất cả Công việc";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button4
             // 
@@ -760,7 +761,7 @@
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(246, 40);
             this.guna2Button4.TabIndex = 10001;
-            this.guna2Button4.Text = "Tạo dự án";
+            this.guna2Button4.Text = "Tạo Công việc";
             // 
             // guna2Panel8
             // 
@@ -888,6 +889,7 @@
             this.pic_home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_home.TabIndex = 10003;
             this.pic_home.TabStop = false;
+            this.pic_home.Click += new System.EventHandler(this.pic_home_Click);
             // 
             // Home
             // 

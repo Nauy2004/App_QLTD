@@ -37,6 +37,7 @@ namespace GUI
 
         private void listViewProject_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ProjectPropertise.ProjectId = "";
             if (listViewProject.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = listViewProject.SelectedItems[0];
@@ -54,7 +55,9 @@ namespace GUI
                 TextBoxDescProject.Text = selectedItem.SubItems[2].Text;
                 TextBoxStartProject.Text = selectedItem.SubItems[3].Text;
                 textBoxProjectEnd.Text = selectedItem.SubItems[4].Text;
+                ProjectPropertise.ProjectId = projectID.Trim();
             }
+            
         }
 
             public void showProject(string id)
@@ -155,8 +158,8 @@ namespace GUI
 
         private void listViewProject_DoubleClick(object sender, EventArgs e)
         {
-            Task task = new Task();
-            task.Show();
+            Home home = new Home();
+            home.openChildForm(new Task());
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)

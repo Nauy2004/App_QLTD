@@ -2,13 +2,7 @@
 using DOT;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Globalization;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL
 {
@@ -16,10 +10,13 @@ namespace BLL
     {
         private GetDataUser GetDatUser;
         private DataProject DataProjet;
+        private DAL_Task DAL_Task;
         SqlConnection conn = ConnectDB.Connect();
-        public BSHOME() { 
-            GetDatUser = new GetDataUser(); 
+        public BSHOME()
+        {
+            GetDatUser = new GetDataUser();
             DataProjet = new DataProject();
+            DAL_Task = new DAL_Task();
         }
         public Employyees GetEml(string id)
         {
@@ -100,7 +97,36 @@ namespace BLL
             }
             return projects;
         }
-        public void AddProject(string id, string name, string description, DateTime startDate, DateTime EndDate) 
+
+
+        public List<Tasks> GetTask(string id)
+        {
+            List<Tasks> Tasks = new List<Tasks>();
+            // Get reader containing project data
+            using (SqlDataReader reader = DAL_Task.ReaderTaskProject(id))
+            {
+                // Read data from reader
+                while (reader.Read())
+                {
+                    Tasks Taski = new Tasks();
+                    Taski.TaskID = reader.GetString(0); // Assuming TaskID is string
+                    Taski.TaskName = reader.GetString(1); // Assuming TaskName is string
+                    Taski.TaskDescription = reader.GetString(2); // Assuming TaskDescription is string
+                    Taski.DuaDate = reader.GetDateTime(3); // DuaDate is likely DateTime
+                    Taski.Status = reader.GetString(4); // Assuming Status is string
+                    Taski.ProjectID = reader.GetString(5); // Assuming Priority is string
+                    Taski.Priority = reader.GetString(6); // EstimatedEffort is likely int
+                    Taski.EstimatedEffort = reader.GetString(7); // Assuming ProjectID is string
+
+                    // Add Taski to the list
+                    Tasks.Add(Taski);
+                }
+                conn.Close();
+            }
+            return Tasks;
+        }
+
+        public void AddProject(string id, string name, string description, DateTime startDate, DateTime EndDate)
         {
             try
             {
@@ -110,7 +136,7 @@ namespace BLL
             {
                 throw new Exception("Error creating project: " + ex.Message);
             }
-            conn.Close() ;
+            conn.Close();
         }
 
         public bool checkUserProjectNull(List<UsersProject> ds, string id_project)
@@ -130,7 +156,7 @@ namespace BLL
         {
             try
             {
-                DataProjet.SetUserProject( id_emp,id_Project,role);
+                DataProjet.SetUserProject(id_emp, id_Project, role);
             }
             catch (Exception ex)
             {
@@ -149,7 +175,7 @@ namespace BLL
                 throw new Exception("Lỗi: " + ex.Message);
             }
         }
-        public void DeleteProject( string id_project )
+        public void DeleteProject(string id_project)
         {
             DataProjet.DeleteProject(id_project);
         }

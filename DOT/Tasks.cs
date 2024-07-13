@@ -14,11 +14,12 @@ namespace DOT
         public DateTime DuaDate { get; set; }
         public string Status { get; set; }
         public string Priority { get; set; }
-        public int EstiMatedEffort { get; set; }
+        public string EstimatedEffort { get; set; }
 
+        public string ProjectID {  get; set; }
         public override string ToString()
         {
-            return this.TaskID + "--" + TaskName + "--" + TaskDescription + "--" + DuaDate + "--" + Status + "--" + Priority + "--" + EstiMatedEffort;
+            return this.TaskID + "--" + TaskName + "--" + TaskDescription + "--" + DuaDate + "--" + Status + "--" + Priority + "--" + EstimatedEffort;
         }
     }
 }

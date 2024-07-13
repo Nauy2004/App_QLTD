@@ -26,7 +26,7 @@ namespace GUI
 
             guna2ShadowForm1.SetShadowForm(this);
             customizeDes();
-            nameUser.Text = employyee.EmployeeName;
+            nameUser.Text = employyee.EmployeeEmail;
         }
         private void customizeDes()
         {
@@ -62,7 +62,7 @@ namespace GUI
         }
 
         private Form activeFrom = null;
-        private void openChildForm(Form formChildForm)
+        public void openChildForm(Form formChildForm)
         {
             if (activeFrom != null)
             {
@@ -96,6 +96,17 @@ namespace GUI
             this.Close();
         }
         private void ls_menu_2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Task());
+            hideSubMenu();
+        }
+
+        private void pic_home_Click(object sender, EventArgs e)
         {
 
         }
