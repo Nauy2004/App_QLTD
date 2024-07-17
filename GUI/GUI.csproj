@@ -75,11 +75,23 @@
     <Compile Include="Account.Designer.cs">
       <DependentUpon>Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeAdmin.Designer.cs">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="loging.cs">
       <SubType>Form</SubType>
@@ -88,6 +100,12 @@
       <DependentUpon>loging.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectAdmin.Designer.cs">
+      <DependentUpon>ProjectAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProjectAll.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,14 +119,35 @@
     <Compile Include="Task.Designer.cs">
       <DependentUpon>Task.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaskAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskAdmin.Designer.cs">
+      <DependentUpon>TaskAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskAssAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskAssAdmin.Designer.cs">
+      <DependentUpon>TaskAssAdmin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loging.resx">
       <DependentUpon>loging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectAdmin.resx">
+      <DependentUpon>ProjectAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectAll.resx">
       <DependentUpon>ProjectAll.cs</DependentUpon>
@@ -125,6 +164,12 @@
     </Compile>
     <EmbeddedResource Include="Task.resx">
       <DependentUpon>Task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskAdmin.resx">
+      <DependentUpon>TaskAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskAssAdmin.resx">
+      <DependentUpon>TaskAssAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

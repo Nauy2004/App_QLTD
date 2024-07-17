@@ -3,6 +3,8 @@ using DOT;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices.ComTypes;
+using System.Xml.Linq;
 
 namespace BLL
 {
@@ -11,12 +13,14 @@ namespace BLL
         private GetDataUser GetDatUser;
         private DataProject DataProjet;
         private DAL_Task DAL_Task;
+        private DataAccessLayer DataAccessLayer;
         SqlConnection conn = ConnectDB.Connect();
         public BSHOME()
         {
             GetDatUser = new GetDataUser();
             DataProjet = new DataProject();
             DAL_Task = new DAL_Task();
+            DataAccessLayer = new DataAccessLayer();
         }
         public Employyees GetEml(string id)
         {
@@ -178,6 +182,19 @@ namespace BLL
         public void DeleteProject(string id_project)
         {
             DataProjet.DeleteProject(id_project);
+        }
+    
+        public void updateTaskStatus(string id_task,string value)
+        {
+            try
+            {
+                DataAccessLayer.update(id_task, "Tasks", "TaskID", "Status", value);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi: " + ex.Message);
+            }
         }
     }
 }

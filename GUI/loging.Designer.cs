@@ -145,6 +145,7 @@
             this.txtMatKhau.Size = new System.Drawing.Size(263, 42);
             this.txtMatKhau.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtMatKhau.TabIndex = 0;
+            this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
             // 
             // txtTaikhoan
             // 

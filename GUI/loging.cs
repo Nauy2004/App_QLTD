@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace GUI
 {
@@ -62,8 +63,8 @@ namespace GUI
         {
             try
             {
-                string username = "developer2";
-                string password = "dev123";                                          
+                string username = txtTaikhoan.Text;
+                string password = txtMatKhau.Text;                                          
                 BSLogin bslogin = new BSLogin();
 
                 Users user = new Users
@@ -78,7 +79,7 @@ namespace GUI
                     string getRole = bslogin.CheckRole(getUser);
                     if (getRole.ToLower() == "admin") 
                     {
-                        Account acc = new Account();
+                        HomeAdmin acc = new HomeAdmin();
                         acc.Show();
                         this.Hide();
                     }
@@ -107,6 +108,11 @@ namespace GUI
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
         {
 
         }

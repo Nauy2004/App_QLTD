@@ -8,7 +8,7 @@ namespace DOT
 {
     public class TaskComments
     {
-        public string CommentID { get; set; }
+        public int CommentID { get; set; }
         public string CommentText { get; set; }
         public string CommentedBy { get; set; }
         public string TaskID { get; set; }
@@ -16,7 +16,7 @@ namespace DOT
 
         public override string ToString()
         {
-            return this.CommentID + "--" + CommentText + "--" + CommentedBy + "--" + TaskID + "--" + CommentedOn;
+            return $"{CommentedBy} : {CommentText} ({CommentID}|{TaskID}) Date: {CommentedOn}";
         }
     }
 }

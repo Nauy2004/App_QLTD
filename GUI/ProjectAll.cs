@@ -56,11 +56,10 @@ namespace GUI
                 TextBoxStartProject.Text = selectedItem.SubItems[3].Text;
                 textBoxProjectEnd.Text = selectedItem.SubItems[4].Text;
                 ProjectPropertise.ProjectId = projectID.Trim();
-            }
-            
+            }    
         }
 
-            public void showProject(string id)
+        public void showProject(string id)
             {
             BSHOME bshome = new BSHOME();
             List<Project> ds = bshome.GetProjects(id);
@@ -158,8 +157,8 @@ namespace GUI
 
         private void listViewProject_DoubleClick(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.openChildForm(new Task());
+            Task task = new Task();
+            task.Show();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)

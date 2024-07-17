@@ -46,7 +46,6 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.titleP1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.ls_menu_5 = new Guna.UI2.WinForms.Guna2Button();
             this.ls_menu_4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.nameUser = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -289,7 +288,6 @@
             this.guna2Panel_left.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Panel_left.BorderThickness = 1;
             this.guna2Panel_left.Controls.Add(this.guna2Panel5);
-            this.guna2Panel_left.Controls.Add(this.ls_menu_5);
             this.guna2Panel_left.Controls.Add(this.ls_menu_4);
             this.guna2Panel_left.Controls.Add(this.guna2Panel1);
             this.guna2Panel_left.Controls.Add(this.ls_menu_3);
@@ -350,30 +348,6 @@
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 10003;
             this.guna2PictureBox3.TabStop = false;
-            // 
-            // ls_menu_5
-            // 
-            this.ls_menu_5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ls_menu_5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ls_menu_5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ls_menu_5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ls_menu_5.FillColor = System.Drawing.Color.Transparent;
-            this.ls_menu_5.Font = new System.Drawing.Font("Calibri", 12F);
-            this.ls_menu_5.ForeColor = System.Drawing.Color.Black;
-            this.ls_menu_5.HoverState.BorderColor = System.Drawing.Color.Navy;
-            this.ls_menu_5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(83)))), ((int)(((byte)(251)))));
-            this.ls_menu_5.HoverState.ForeColor = System.Drawing.Color.White;
-            this.ls_menu_5.HoverState.Image = global::GUI.Properties.Resources.icons8_overview_48_white;
-            this.ls_menu_5.Image = global::GUI.Properties.Resources.icons8_overview_48;
-            this.ls_menu_5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ls_menu_5.ImageOffset = new System.Drawing.Point(8, 0);
-            this.ls_menu_5.Location = new System.Drawing.Point(3, 360);
-            this.ls_menu_5.Margin = new System.Windows.Forms.Padding(0);
-            this.ls_menu_5.Name = "ls_menu_5";
-            this.ls_menu_5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ls_menu_5.Size = new System.Drawing.Size(170, 60);
-            this.ls_menu_5.TabIndex = 5;
-            this.ls_menu_5.Text = "Trang chủ";
             // 
             // ls_menu_4
             // 
@@ -982,7 +956,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel titleP1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2Button ls_menu_5;
         private Guna.UI2.WinForms.Guna2Button ls_menu_4;
         private Guna.UI2.WinForms.Guna2Button ls_menu_3;
         private Guna.UI2.WinForms.Guna2Button ls_menu_2;
