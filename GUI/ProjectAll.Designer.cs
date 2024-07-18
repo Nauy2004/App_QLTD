@@ -358,7 +358,6 @@
             this.CreateBtnProject.Size = new System.Drawing.Size(53, 19);
             this.CreateBtnProject.TabIndex = 5;
             this.CreateBtnProject.Text = "Tạo";
-            this.CreateBtnProject.Click += new System.EventHandler(this.CreateBtnProject_Click);
             // 
             // guna2Button5
             // 

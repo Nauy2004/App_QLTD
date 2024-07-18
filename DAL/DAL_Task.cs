@@ -11,8 +11,9 @@ namespace DAL
     public class DAL_Task
     {
         private SqlDataReader reader = null;
+        // Hàm constructor
         public DAL_Task() { }
-
+        // Các phương thức (Methods):
         public SqlDataReader ReaderTask(string idProject, string id_emp)
         {
             SqlConnection conn = ConnectDB.Connect();
@@ -24,7 +25,6 @@ namespace DAL
             reader = cmd.ExecuteReader();
             return reader;
         }
-
         public SqlDataReader ReaderTaskProject(string idProject)
         {
             SqlConnection conn = ConnectDB.Connect();
@@ -46,8 +46,6 @@ namespace DAL
             reader = cmd.ExecuteReader();
             return reader;
         }
-
-
         public void UpdateTask(string id, string name, string desc, DateTime start, string Status,string Priority,string Estima)
         {
             SqlConnection conn = ConnectDB.Connect();

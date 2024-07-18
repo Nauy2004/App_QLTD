@@ -33,10 +33,6 @@ namespace GUI
             formChildForm.BringToFront();
             formChildForm.Show();
         }
-        private void guna2Panel2chill_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void ls_menu_2_Click(object sender, EventArgs e)
         {

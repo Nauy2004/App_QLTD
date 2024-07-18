@@ -12,8 +12,11 @@ namespace DAL
     public class DataAccessLayer
     {
         private SqlDataReader reader = null;
+
+        //hàm constructor
         public DataAccessLayer() { }
 
+        // Các phương thức(Methods)
         public SqlDataReader Getall(string pra)
         {
             string query = $"SELECT * FROM {pra}";
@@ -71,6 +74,5 @@ namespace DAL
 
             Console.WriteLine("Project with ID: " + id + " deleted successfully.");
         }
-
     }
 }

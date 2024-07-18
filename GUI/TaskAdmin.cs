@@ -204,7 +204,7 @@ namespace GUI
             tasksA = bStaskAdmin.GetTaskAssignments();
             string idEmp = ComboBoxIdEMP.Text;
             string idTask = ComboBoxIDTask.Text;
-            if (!bStaskAdmin.checkIdTaskAssign(idTask, tasksA))
+            if (!bStaskAdmin.checkIdTaskAssign(idTask, tasksA, idEmp))
             {
                 bStaskAdmin.addTaskAssignment(idEmp, idTask);
                 MessageBox.Show("add TaskAssignment succes");
@@ -227,6 +227,25 @@ namespace GUI
             else
             {
                 MessageBox.Show("Chọn IdTask trước khi ấn vào nút này");
+            }
+        }
+
+        private void Btn_delete_task_Click(object sender, EventArgs e)
+        {
+            BStaskAdmin bStaskAdmin = new BStaskAdmin();
+            List<Tasks> tasksA = new List<Tasks>();
+            tasksA = bStaskAdmin.GetTasks();
+            string idTask = ComboBoxIDTask.Text;
+            if (bStaskAdmin.checkIdTask(idTask, tasksA))
+            {
+                bStaskAdmin.DeleteTask( idTask);
+                loadDataGrid();
+                setComboBoxIDTask();
+                MessageBox.Show("delete TaskAssignment succes");
+            }
+            else
+            {
+                MessageBox.Show("delete TaskAssignment not succes");
             }
         }
     }

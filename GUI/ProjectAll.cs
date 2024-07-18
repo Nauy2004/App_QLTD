@@ -200,47 +200,6 @@ namespace GUI
 
         }
 
-        private void CreateBtnProject_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(textboxIDproject.Text) ||
-                    string.IsNullOrEmpty(TextBoxNameProject.Text) ||
-                    string.IsNullOrEmpty(TextBoxDescProject.Text))
-            {
-                MessageBox.Show("Please fill in all project details!");
-                return;
-            }
-            string id = textboxIDproject.Text;
-            string name = TextBoxNameProject.Text;
-            string desc = TextBoxDescProject.Text;
-            DateTime startDate = DateTime.Parse(TextBoxStartProject.Text);
-            DateTime endDate = DateTime.Parse(textBoxProjectEnd.Text);
-
-            try
-            {
-                BSHOME projectBLL = new BSHOME();
-                Employyees employyee = projectBLL.GetEml(userID);
-                List<UsersProject> ds = projectBLL.UserProjects(employyee.EmployeeID);
-
-                projectBLL.AddProject(id, name, desc, startDate, endDate);
-
-                if (projectBLL.checkUserProjectNull(ds, id))
-                {
-                    projectBLL.setProjectUser(employyee.EmployeeID, id, "admin");
-                    MessageBox.Show("susecc");
-                }
-                else
-                {
-                    MessageBox.Show($"not susecc");
-                }
-                MessageBox.Show("Project created successfully!");
-                clearTextBox();
-                panel1_update.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error creating project: " + ex.Message);
-            }
-        }
     
         private void clearTextBox()
         {

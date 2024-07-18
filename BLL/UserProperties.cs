@@ -8,6 +8,7 @@ namespace BLL
 {
     public class UserProperties
     {
+        // lưu idUser sau khi đăng nhập
         public static string UserId { get; set; }
     }
 }

@@ -17,6 +17,7 @@ namespace BLL
         {
             GetDatUser = new GetDataUser();
         }
+        // Hàm login 
         public string CheckLogic(Users user)
         {
             string userId = null;
@@ -30,6 +31,7 @@ namespace BLL
             }
             return userId;
         }
+        // Hàm phân quyền
         public string CheckRole(string id)
         {
             string role = null;

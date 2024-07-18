@@ -22,6 +22,7 @@ namespace BLL
             dataProject = new DataProject();
             task = new DAL_Task();
         }
+        // Hàm Trả về Project List
         public List<Project> GetProjectsAll()
         {
             List<Project> projects = new List<Project>();
@@ -45,6 +46,7 @@ namespace BLL
             return projects;
         }
 
+        // Hàm trả về UsersProject List 
         public List<UsersProject> getEmpProjectAll()
         {
             List<UsersProject> projects = new List<UsersProject>();
@@ -66,6 +68,7 @@ namespace BLL
             return projects;
         }
 
+        //Hàm trả về Employyees List
         public List<Employyees> getEmpAll()
         {
             List<Employyees> projects = new List<Employyees>();
@@ -89,6 +92,7 @@ namespace BLL
         }
         
         
+        // Hàm set User vào dự án
         public void setProjectUser(String id_emp, string id_Project, string role)
         {
             try
@@ -100,6 +104,8 @@ namespace BLL
                 throw new Exception("Lỗi: " + ex.Message);
             }
         }
+
+        // Hàm check id_project có tồn tại trong UsersProject List hay không
         public bool checkUserProjectNull(List<UsersProject> ds, string id_project)
         {
             bool check = true;
@@ -113,6 +119,7 @@ namespace BLL
             return check;
         }
 
+        // Hàm xóa dự án
         public void DeleteProject(string idP,List<Tasks> taskID)
         {
             try

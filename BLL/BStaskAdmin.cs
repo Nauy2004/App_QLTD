@@ -24,7 +24,7 @@ namespace BLL
             dataProject = new DataProject();
             task = new DAL_Task();
         }
-
+        // Hàm trả về danh sách Task
         public List<Tasks> GetTasks()
         {
             List<Tasks> tasks = new List<Tasks>();
@@ -49,6 +49,8 @@ namespace BLL
             }
             return tasks;
         }
+
+        // Hàm trả về danh sách Employyees
         public List<Employyees> GetEMPS()
         {
             List<Employyees> emps = new List<Employyees>();
@@ -69,6 +71,7 @@ namespace BLL
             }
             return emps;
         }
+        // Hàm trả về danh sách TaskAssignments
         public List<TaskAssignments> GetTaskAssignments() 
         {
             List<TaskAssignments> taskAssignments = new List<TaskAssignments>();
@@ -87,6 +90,7 @@ namespace BLL
             }
             return taskAssignments;
         }
+        // Hàm trả về danh sách TaskEmp
         public List<TaskEmp> GetTaskAssignmentsByID(string id)
         {
             List<TaskEmp> TaskEmp1 = new List<TaskEmp>();
@@ -107,6 +111,7 @@ namespace BLL
             }
             return TaskEmp1;
         }
+        // Hàm trả về danh sách TaskComments
         public List<TaskComments> GetCommentByID(string id)
         {
             List<TaskComments> comments = new List<TaskComments>();
@@ -128,6 +133,8 @@ namespace BLL
             }
             return comments;
         }
+       
+        //Hàm phân công công việc
         public void addTaskAssignment(string id_emp,string id_task)
         {
             try
@@ -139,6 +146,8 @@ namespace BLL
                 throw new Exception("Lỗi: " + ex.Message);
             }
         }
+        
+        //Hàm update công việc
         public void UPTask(string id, string name, string desc, DateTime start, string Status, string Priority, string Estima)
         {
             try
@@ -151,6 +160,7 @@ namespace BLL
             }
         }
 
+        //Hàm thêm công việc
         public void AddTask(string id_T, string name, string desc, DateTime start, string Status, string Priority, string Estima, string id_P)
         {
             try
@@ -163,6 +173,7 @@ namespace BLL
             }
             conn.Close();
         }
+        //Hàm Kiểm tra Task_id có tồn tại hay không trong danh sách Task
         public bool checkIdTask(string id, List<Tasks> tasks) 
         {
             foreach (Tasks task in tasks) 
@@ -174,11 +185,12 @@ namespace BLL
             }
             return false;
         }
-        public bool checkIdTaskAssign(string id, List<TaskAssignments> tasks)
+        //Hàm Kiểm tra Task_id có tồn tại hay không trong danh sách TaskAssignments
+        public bool checkIdTaskAssign(string id, List<TaskAssignments> tasks,string emp)
         {
             foreach (TaskAssignments task in tasks)
             {
-                if (task.TaskID.Trim() == id.Trim())
+                if (task.TaskID.Trim() == id.Trim() && task.EmployeeID == emp)
                 {
                     return true;
                 }
@@ -186,5 +198,20 @@ namespace BLL
             return false;
         }
 
+        public void DeleteTask(string id) 
+        {
+            try
+            {
+                accessLayer.Delete(id, "TaskAssignments", "TaskID");
+                accessLayer.Delete(id, "TaskComments", "TaskID");
+                accessLayer.Delete(id, "Tasks", "TaskID");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error creating project: " + ex.Message);
+            }
+            conn.Close();
+        }
+    
     }
 }

@@ -14,6 +14,7 @@ namespace GUI
 {
     public partial class Home : Form
     {
+        // lấy userID từ UserProperties
         string userID = UserProperties.UserId;
         public Home()
         {
@@ -28,11 +29,14 @@ namespace GUI
             customizeDes();
             nameUser.Text = employyee.EmployeeEmail;
         }
+
+        // hàm set panelDropDown Visible mặc định là false
         private void customizeDes()
         {
             panelProjectDropDown.Visible = false;
             PanelDropDownTask.Visible = false;
         }
+        //Hàm logic Dóng Menu
         private void hideSubMenu()
         {
             if (panelProjectDropDown.Visible == true)
@@ -44,6 +48,7 @@ namespace GUI
                 PanelDropDownTask.Visible = false;
             }
         }
+        //Hàm mở menu
         private void showSubMenu(Panel submenu)
         {
             if (submenu.Visible == false) 
@@ -51,7 +56,8 @@ namespace GUI
                 hideSubMenu();
                 submenu.Visible = true;
             }else { submenu .Visible = false; }
-        }
+        }    
+        
         private void btn_task_show_Click(object sender, EventArgs e)
         {
             showSubMenu(PanelDropDownTask);
@@ -82,33 +88,16 @@ namespace GUI
             openChildForm(new  ProjectAll());
             hideSubMenu();
         }
-
-        private void nameUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void ls_menu_1_Click(object sender, EventArgs e)
         {
             Home home = new Home();
             home.Show();
             this.Close();
         }
-        private void ls_menu_2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             openChildForm(new Task());
             hideSubMenu();
-        }
-
-        private void pic_home_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

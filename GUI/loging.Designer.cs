@@ -64,7 +64,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -81,7 +80,6 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(50, 30, 50, 0);
             this.panel1.Size = new System.Drawing.Size(310, 344);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnLogin
             // 
@@ -118,7 +116,6 @@
             this.checkBoxShowPass.UncheckedState.BorderRadius = 3;
             this.checkBoxShowPass.UncheckedState.BorderThickness = 0;
             this.checkBoxShowPass.UncheckedState.FillColor = System.Drawing.Color.DarkGray;
-            this.checkBoxShowPass.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
             // 
             // txtMatKhau
             // 
@@ -176,8 +173,6 @@
             this.txtTaikhoan.Size = new System.Drawing.Size(263, 51);
             this.txtTaikhoan.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtTaikhoan.TabIndex = 0;
-            this.txtTaikhoan.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
-            this.txtTaikhoan.Click += new System.EventHandler(this.enter_input);
             // 
             // guna2HtmlLabel1
             // 

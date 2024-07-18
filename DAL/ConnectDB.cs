@@ -11,7 +11,7 @@ namespace DAL
     {
         public static SqlConnection Connect()
         {
-            string strconn = @"Data Source=DESKTOP-4976QMC;Initial Catalog=SQL_QLTD;Integrated Security=True";
+            string strconn = @"Data Source=DESKTOP-4976QMC;Initial Catalog=QLTD;Integrated Security=True";
             SqlConnection conn = new SqlConnection(strconn);
             return conn;
         }

@@ -396,7 +396,6 @@
             this.nameUser.TabIndex = 7;
             this.nameUser.Text = "Hoàng Nguyễn Tuấn ";
             this.nameUser.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.nameUser.Click += new System.EventHandler(this.nameUser_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -863,7 +862,6 @@
             this.pic_home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_home.TabIndex = 10003;
             this.pic_home.TabStop = false;
-            this.pic_home.Click += new System.EventHandler(this.pic_home_Click);
             // 
             // Home
             // 

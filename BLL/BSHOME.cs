@@ -22,6 +22,7 @@ namespace BLL
             DAL_Task = new DAL_Task();
             DataAccessLayer = new DataAccessLayer();
         }
+        // Hàm trả về Employyees 
         public Employyees GetEml(string id)
         {
             Employyees eml = null;
@@ -35,6 +36,8 @@ namespace BLL
             }
             return eml;
         }
+       
+        // Hàm trả về Project List với tham số chuyền vào là id users
         public List<Project> GetProjects(string id)
         {
             List<Project> projects = new List<Project>();
@@ -58,6 +61,7 @@ namespace BLL
             return projects;
         }
 
+        // Hàm trả về Project List với Tham số chuyền vào là 
         public List<Project> sreachProjects(string pra)
         {
             List<Project> projects = new List<Project>();
@@ -80,7 +84,7 @@ namespace BLL
             }
             return projects;
         }
-
+        // Hàm trả về UsersProject List với Tham số chuyền vào là id Employyees
         public List<UsersProject> UserProjects(string id_emp)
         {
             List<UsersProject> projects = new List<UsersProject>();
@@ -102,7 +106,7 @@ namespace BLL
             return projects;
         }
 
-
+        // Hàm trả về Tasks List với Tham số chuyền vào là id Project
         public List<Tasks> GetTask(string id)
         {
             List<Tasks> Tasks = new List<Tasks>();
@@ -130,6 +134,7 @@ namespace BLL
             return Tasks;
         }
 
+        // Hàm thêm dự án
         public void AddProject(string id, string name, string description, DateTime startDate, DateTime EndDate)
         {
             try
@@ -142,7 +147,7 @@ namespace BLL
             }
             conn.Close();
         }
-
+        // Hàm check id_project có tồn tại trong UsersProject List hay không
         public bool checkUserProjectNull(List<UsersProject> ds, string id_project)
         {
             bool check = true;
@@ -156,18 +161,7 @@ namespace BLL
             return check;
         }
 
-        public void setProjectUser(String id_emp, string id_Project, string role)
-        {
-            try
-            {
-                DataProjet.SetUserProject(id_emp, id_Project, role);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi: " + ex.Message);
-            }
-        }
-
+        //hàm câp nhập thông tin dự án
         public void UPProject(string id, string name, string description, DateTime startDate, DateTime EndDate)
         {
             try
@@ -179,11 +173,14 @@ namespace BLL
                 throw new Exception("Lỗi: " + ex.Message);
             }
         }
+        
+        //Hàm xóa dự án
         public void DeleteProject(string id_project)
         {
             DataProjet.DeleteProject(id_project);
         }
-    
+        
+        // Hàm cập nhập trang thái công việc
         public void updateTaskStatus(string id_task,string value)
         {
             try

@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.guna2Paneltop = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CustomGradientPanel1left = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2Panel2chill = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.pic_home = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2CustomGradientPanel1left = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.ls_menu_4 = new Guna.UI2.WinForms.Guna2Button();
             this.ls_menu_3 = new Guna.UI2.WinForms.Guna2Button();
             this.ls_menu_2 = new Guna.UI2.WinForms.Guna2Button();
             this.LS_accout = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel2chill = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.pic_home = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Paneltop.SuspendLayout();
-            this.guna2CustomGradientPanel1left.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
+            this.guna2CustomGradientPanel1left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_home)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,27 +56,6 @@
             this.guna2Paneltop.Name = "guna2Paneltop";
             this.guna2Paneltop.Size = new System.Drawing.Size(1208, 54);
             this.guna2Paneltop.TabIndex = 0;
-            // 
-            // guna2CustomGradientPanel1left
-            // 
-            this.guna2CustomGradientPanel1left.Controls.Add(this.ls_menu_4);
-            this.guna2CustomGradientPanel1left.Controls.Add(this.ls_menu_3);
-            this.guna2CustomGradientPanel1left.Controls.Add(this.ls_menu_2);
-            this.guna2CustomGradientPanel1left.Controls.Add(this.LS_accout);
-            this.guna2CustomGradientPanel1left.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2CustomGradientPanel1left.Location = new System.Drawing.Point(0, 54);
-            this.guna2CustomGradientPanel1left.Name = "guna2CustomGradientPanel1left";
-            this.guna2CustomGradientPanel1left.Size = new System.Drawing.Size(173, 700);
-            this.guna2CustomGradientPanel1left.TabIndex = 0;
-            // 
-            // guna2Panel2chill
-            // 
-            this.guna2Panel2chill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2chill.Location = new System.Drawing.Point(173, 54);
-            this.guna2Panel2chill.Name = "guna2Panel2chill";
-            this.guna2Panel2chill.Size = new System.Drawing.Size(1035, 700);
-            this.guna2Panel2chill.TabIndex = 1;
-            this.guna2Panel2chill.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2chill_Paint);
             // 
             // guna2Panel4
             // 
@@ -91,6 +70,24 @@
             this.guna2Panel4.Size = new System.Drawing.Size(173, 54);
             this.guna2Panel4.TabIndex = 1;
             // 
+            // guna2Button7
+            // 
+            this.guna2Button7.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button7.BorderRadius = 10;
+            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button7.FillColor = System.Drawing.Color.White;
+            this.guna2Button7.Font = new System.Drawing.Font("Calibri", 9F);
+            this.guna2Button7.ForeColor = System.Drawing.Color.White;
+            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.guna2Button7.Image = global::GUI.Properties.Resources.icons8_menu_16;
+            this.guna2Button7.Location = new System.Drawing.Point(9, 4);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.Size = new System.Drawing.Size(35, 35);
+            this.guna2Button7.TabIndex = 1;
+            // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
@@ -102,49 +99,17 @@
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Pal";
             // 
-            // guna2ControlBox2
+            // guna2CustomGradientPanel1left
             // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1078, 3);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox2.TabIndex = 10005;
-            // 
-            // guna2ControlBox3
-            // 
-            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1119, 3);
-            this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox3.TabIndex = 10006;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1160, 3);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox1.TabIndex = 10004;
-            // 
-            // pic_home
-            // 
-            this.pic_home.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pic_home.Image = global::GUI.Properties.Resources.Pa_logo;
-            this.pic_home.ImageRotate = 0F;
-            this.pic_home.Location = new System.Drawing.Point(173, 54);
-            this.pic_home.Name = "pic_home";
-            this.pic_home.Size = new System.Drawing.Size(1035, 700);
-            this.pic_home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_home.TabIndex = 10007;
-            this.pic_home.TabStop = false;
+            this.guna2CustomGradientPanel1left.Controls.Add(this.ls_menu_4);
+            this.guna2CustomGradientPanel1left.Controls.Add(this.ls_menu_3);
+            this.guna2CustomGradientPanel1left.Controls.Add(this.ls_menu_2);
+            this.guna2CustomGradientPanel1left.Controls.Add(this.LS_accout);
+            this.guna2CustomGradientPanel1left.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2CustomGradientPanel1left.Location = new System.Drawing.Point(0, 54);
+            this.guna2CustomGradientPanel1left.Name = "guna2CustomGradientPanel1left";
+            this.guna2CustomGradientPanel1left.Size = new System.Drawing.Size(173, 700);
+            this.guna2CustomGradientPanel1left.TabIndex = 0;
             // 
             // ls_menu_4
             // 
@@ -244,23 +209,57 @@
             this.LS_accout.TabIndex = 11;
             this.LS_accout.Text = "Tài Khoản";
             // 
-            // guna2Button7
+            // guna2Panel2chill
             // 
-            this.guna2Button7.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.BorderRadius = 10;
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.FillColor = System.Drawing.Color.White;
-            this.guna2Button7.Font = new System.Drawing.Font("Calibri", 9F);
-            this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.guna2Button7.Image = global::GUI.Properties.Resources.icons8_menu_16;
-            this.guna2Button7.Location = new System.Drawing.Point(9, 4);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(35, 35);
-            this.guna2Button7.TabIndex = 1;
+            this.guna2Panel2chill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2chill.Location = new System.Drawing.Point(173, 54);
+            this.guna2Panel2chill.Name = "guna2Panel2chill";
+            this.guna2Panel2chill.Size = new System.Drawing.Size(1035, 700);
+            this.guna2Panel2chill.TabIndex = 1;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1078, 3);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox2.TabIndex = 10005;
+            // 
+            // guna2ControlBox3
+            // 
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1119, 3);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox3.TabIndex = 10006;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1160, 3);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 10004;
+            // 
+            // pic_home
+            // 
+            this.pic_home.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pic_home.Image = global::GUI.Properties.Resources.Pa_logo;
+            this.pic_home.ImageRotate = 0F;
+            this.pic_home.Location = new System.Drawing.Point(173, 54);
+            this.pic_home.Name = "pic_home";
+            this.pic_home.Size = new System.Drawing.Size(1035, 700);
+            this.pic_home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_home.TabIndex = 10007;
+            this.pic_home.TabStop = false;
             // 
             // HomeAdmin
             // 
@@ -280,9 +279,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeAdmin";
             this.guna2Paneltop.ResumeLayout(false);
-            this.guna2CustomGradientPanel1left.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
+            this.guna2CustomGradientPanel1left.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_home)).EndInit();
             this.ResumeLayout(false);
 
